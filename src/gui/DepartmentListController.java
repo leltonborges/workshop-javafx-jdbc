@@ -49,7 +49,8 @@ public class DepartmentListController implements Initializable {
 	@FXML
 	public void onBtNewDepartmentAction(ActionEvent event) {
 		Stage parentStage = Utils.currentStage(event);
-		createDialogFrom("/gui/DepartmentForm.fxml", parentStage);
+		Department obj = new Department();
+		createDialogFrom(obj, "/gui/DepartmentForm.fxml", parentStage);
 	}
 
 	@Override
@@ -76,10 +77,14 @@ public class DepartmentListController implements Initializable {
 		tableViewDepartment.setItems(obsListDepartment);
 	}
 	
-	private void createDialogFrom(String absoluteName, Stage parentStage) {
+	private void createDialogFrom(Department obj, String absoluteName, Stage parentStage) {
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource(absoluteName));
 			Pane pane = loader.load();
+			
+			DepartmentFormController controller = loader.getController();
+			controller.setDepartment(obj);
+			controller.updateFormData();
 			
 			Stage dialogStage = new Stage();
 			dialogStage.setTitle("Enter Deparment data");
@@ -90,6 +95,7 @@ public class DepartmentListController implements Initializable {
 			//tela modal
 			dialogStage.initModality(Modality.WINDOW_MODAL);
 			dialogStage.showAndWait();
+			
 			
 		} catch(IOException e) {
 			Alerts.showAlert("IO Exception", null, "Error Dialog Form", AlertType.ERROR);
