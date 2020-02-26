@@ -11,6 +11,7 @@ import java.util.List;
 import model.connections.DB;
 import model.entities.Department;
 import model.exceptions.DbException;
+import model.exceptions.DbIntegrityException;
 import model.model.dao.DepartmentDao;
 
 public class DepartmentDaoJDBC implements DepartmentDao {
@@ -76,7 +77,7 @@ public class DepartmentDaoJDBC implements DepartmentDao {
 			
 			ps.executeUpdate();
 		}catch(SQLException e) {
-			throw new DbException(e.getMessage());
+			throw new DbIntegrityException(e.getMessage());
 		}finally {
 			DB.CloseStatement(ps);
 		}

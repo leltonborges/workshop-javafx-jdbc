@@ -34,15 +34,17 @@ public class Program {
 //		sellerDao.insert(newSeller);
 //		System.out.println("Inserted! new id = "+ newSeller.getId());
 		
-		System.out.println("\n==== Test 5:  seller Update ====");
-		Seller sellerUpdate = sellerDao.findById(1);
-		sellerUpdate.setName("Martha Waina");
-		sellerDao.update(sellerUpdate);
-		System.out.println("Update completed");
+//		System.out.println("\n==== Test 5:  seller Update ====");
+//		Seller sellerUpdate = sellerDao.findById(1);
+//		sellerUpdate.setName("Martha Waina");
+//		sellerDao.update(sellerUpdate);
+//		System.out.println("Update completed");
 		
-		System.out.println("\n==== Test 6:  seller Delete ====");
-		sellerDao.deleteById(8);;
-		System.out.println("Delete completed");
+//		System.out.println("\n==== Test 6:  seller Delete ====");
+//		sellerDao.deleteById(8);;
+//		System.out.println("Delete completed");
+		
+		
 	}
 
 }

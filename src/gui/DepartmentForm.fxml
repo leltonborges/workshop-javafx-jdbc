@@ -26,7 +26,7 @@
          <children>
             <Label text="Id" />
             <Label text="Name" GridPane.rowIndex="1" />
-            <TextField fx:id="txtId" editable="false" GridPane.columnIndex="1" />
+            <TextField fx:id="txtId" editable="false" promptText="auto" GridPane.columnIndex="1" />
             <TextField fx:id="txtName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label fx:id="labelErrorName" prefHeight="27.0" prefWidth="232.0" textFill="#f50202" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <GridPane.margin>

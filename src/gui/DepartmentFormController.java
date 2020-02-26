@@ -83,9 +83,9 @@ public class DepartmentFormController implements Initializable {
 
 	private Department getFormData() {
 		Department obj = new Department();
-		VadationException exception = new VadationException("Validation error");
-		
 		obj.setId(Utils.tryParseToInt(txtId.getText()));
+
+		VadationException exception = new VadationException("Validation error");
 		if(txtName.getText() == null || txtName.getText().trim().equals("")) {
 			exception.addErrors("Name", "Field can't be empty");
 		}

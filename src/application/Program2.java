@@ -10,7 +10,7 @@ public class Program2 {
 		DepartmentDao departmentDao = DaoFactory.createDepartmetDao();
 		
 		System.out.println("==== Test 1:  department  findById====");
-		Department d = departmentDao.findById(1);
+		Department d = departmentDao.findById(3);
 		System.out.println(d);
 		
 //		System.out.println("\n==== Test 2:  department  findAll====");
@@ -24,15 +24,15 @@ public class Program2 {
 //		departmentDao.insert(newDepartment);
 //		System.out.println("Inserted! new id = "+ newDepartment.getId());
 
-		System.out.println("\n==== Test 4:  department  Update====");
-		Department updateDepartment = departmentDao.findById(7);
-		updateDepartment.setName("Lelton Borges");
-		departmentDao.update(updateDepartment);
-		System.out.println("Update completed");
+//		System.out.println("\n==== Test 4:  department  Update====");
+//		Department updateDepartment = departmentDao.findById(7);
+//		updateDepartment.setName("Lelton Borges");
+//		departmentDao.update(updateDepartment);
+//		System.out.println("Update completed");
 		
-		System.out.println("\n==== Test 5:  department  delete ====");
-		departmentDao.deleteById(7);
-		System.out.println("Delete completed");
+//		System.out.println("\n==== Test 5:  department  delete ====");
+//		departmentDao.deleteById(7);
+//		System.out.println("Delete completed");
 	}
 
 }
